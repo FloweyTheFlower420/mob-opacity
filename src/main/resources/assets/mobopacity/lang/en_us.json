@@ -1,0 +1,10 @@
+{
+    "mobopacity.config.title": "Mob Opacity Config",
+    "mobopacity.config.category.isenabled": "Enable/Disable",
+    "mobopacity.config.isenabled": "Enabled",
+    "mobopacity.config.isenabled.tooltip": "Controls whether or not to enable opacity changes",
+    "mobopacity.config.category.player": "Player Opacity",
+    "mobopacity.config.opacity": "%s opacity",
+    "mobopacity.config.opacity.tooltip": "Controls the opacity of the %s mob",
+    "mobopacity.config.category.othermobs": "Mob Opacities"
+}

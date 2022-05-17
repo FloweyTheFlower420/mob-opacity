@@ -9,8 +9,8 @@
     "FloweyTheFlower420"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/FloweyTheFlower420/mob-opacity",
+    "sources": "https://github.com/FloweyTheFlower420/mob-opacity"
   },
 
   "license": "MIT",
@@ -31,13 +31,10 @@
   "mixins": [
     "mobopacity.mixin.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "1.17.x",
+    "java": ">=16"
   }
 }

@@ -24,6 +24,7 @@ public class ConfigMenu implements ModMenuApi {
 
     private static class ConfigScreen extends Screen {
         private final Screen parent;
+
         protected ConfigScreen(Screen parent) {
             super(new TranslatableComponent("mobopacity.config.title"));
             this.parent = parent;
@@ -49,14 +50,14 @@ public class ConfigMenu implements ModMenuApi {
                         .build()
                 );
 
-            config.getOrCreateCategory(new TranslatableComponent("mobopacity.config.category.player")).addEntry(
+            config.getOrCreateCategory(new TranslatableComponent("mobopacity.config.category.misc")).addEntry(
                 config.entryBuilder()
                     .startIntSlider(
                         new TranslatableComponent(
                             "mobopacity.config.opacity",
                             "Player"
                         ),
-                        (int)(ModClientMain.options.opacities.getOrDefault(new ResourceLocation("minecraft:player"), 1f) * 100),
+                        (int) (ModClientMain.options.opacities.getOrDefault(new ResourceLocation("minecraft:player"), 1f) * 100),
                         0, 100)
                     .setDefaultValue(100)
                     .setTooltip(
@@ -65,7 +66,7 @@ public class ConfigMenu implements ModMenuApi {
                             "Player"
                         )
                     )
-                    .setSaveConsumer((v) -> ModClientMain.options.opacities.put(new ResourceLocation("minecraft:player"), (float)v / 100))
+                    .setSaveConsumer((v) -> ModClientMain.options.opacities.put(new ResourceLocation("minecraft:player"), (float) v / 100))
                     .build()
             );
 
@@ -75,7 +76,7 @@ public class ConfigMenu implements ModMenuApi {
             Registry.ENTITY_TYPE.stream()
                 .map((a) -> new AbstractMap.SimpleImmutableEntry<>(a, Registry.ENTITY_TYPE.getKey(a)))
                 .forEach((a) -> {
-                    if(a.getValue().toString().equals("minecraft:player"))
+                    if (a.getValue().toString().equals("minecraft:player"))
                         return;
                     otherMobs.addEntry(
                         config.entryBuilder()
@@ -84,7 +85,7 @@ public class ConfigMenu implements ModMenuApi {
                                     "mobopacity.config.opacity",
                                     a.getKey().getDescription().getString()
                                 ),
-                                (int)(ModClientMain.options.opacities.getOrDefault(a.getValue(), 1f) * 100),
+                                (int) (ModClientMain.options.opacities.getOrDefault(a.getValue(), 1f) * 100),
                                 0, 100)
                             .setDefaultValue(100)
                             .setTooltip(
@@ -93,7 +94,7 @@ public class ConfigMenu implements ModMenuApi {
                                     a.getKey().getDescription().getString()
                                 )
                             )
-                            .setSaveConsumer((v) -> ModClientMain.options.opacities.put(a.getValue(), (float)v / 100))
+                            .setSaveConsumer((v) -> ModClientMain.options.opacities.put(a.getValue(), (float) v / 100))
                             .build()
                     );
                 });

@@ -18,10 +18,10 @@ repositories {
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	/*mappings loom.layered() {
-		officialMojangMappings()
-		//parchment("org.parchmentmc.data:parchment-1.16.5:2021.09.05@zip")
-	}*/
+	//mappings loom.layered() {
+	//	officialMojangMappings()
+	//	parchment("org.parchmentmc.data:parchment-1.16.5:2022.03.06@zip")
+	//}
 
 	mappings loom.officialMojangMappings()
 	modApi "com.terraformersmc:modmenu:1.16.0"

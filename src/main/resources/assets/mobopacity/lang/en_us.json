@@ -3,8 +3,12 @@
     "mobopacity.config.category.isenabled": "Enable/Disable",
     "mobopacity.config.isenabled": "Enabled",
     "mobopacity.config.isenabled.tooltip": "Controls whether or not to enable opacity changes",
-    "mobopacity.config.category.player": "Player Opacity",
+    "mobopacity.config.category.misc": "Misc Opacity",
     "mobopacity.config.opacity": "%s opacity",
     "mobopacity.config.opacity.tooltip": "Controls the opacity of the %s mob",
-    "mobopacity.config.category.othermobs": "Mob Opacities"
+    "mobopacity.config.category.othermobs": "Mob Opacities",
+    "mobopacity.config.armouropacity": "Armour Opacity",
+    "mobopacity.config.armouropacity.tooltip": "Controls the opacity of armour pieces on all mobs",
+    "mobopacity.config.itemopacity": "Held Item Opacity",
+    "mobopacity.config.itemopacity.tooltip": "Controls the opacity of held item (both offhand and mainhand) on all mobs"
 }

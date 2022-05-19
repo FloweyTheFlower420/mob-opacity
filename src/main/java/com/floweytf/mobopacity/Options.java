@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Options {
-    public boolean enabled;
+    public boolean enabled = true;
 
     Map<ResourceLocation, Float> opacities = new HashMap<>();
 }

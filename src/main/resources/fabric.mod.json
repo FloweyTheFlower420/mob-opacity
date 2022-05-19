@@ -12,7 +12,6 @@
     "homepage": "https://github.com/FloweyTheFlower420/mob-opacity",
     "sources": "https://github.com/FloweyTheFlower420/mob-opacity"
   },
-
   "license": "MIT",
   "icon": "assets/mobopacity/icon.png",
 
@@ -36,5 +35,6 @@
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"
-  }
+  },
+  "accessWidener" : "mobopacity.accesswidener"
 }

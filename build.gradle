@@ -32,6 +32,10 @@ dependencies {
 	}
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/mobopacity.accesswidener")
+}
+
 processResources {
 	inputs.property "version", project.version
 	filesMatching("fabric.mod.json") {

@@ -16,12 +16,17 @@ import static net.minecraft.client.renderer.RenderStateShard.*;
 
 @Mixin(RenderType.class)
 public class RenderTypeMixin extends RenderStateShard {
+    @Shadow
+    private static RenderType.CompositeRenderType create(String string, VertexFormat vertexFormat, VertexFormat.Mode mode, int i, boolean bl, boolean bl2, RenderType.CompositeState compositeState) {
+        throw new AssertionError();
+    }
+
     public RenderTypeMixin() {
         super(null, null, null);
     }
 
     @Inject(at = @At("HEAD"), method = "entitySolid", cancellable = true)
-    private static void handleEntitySolid(ResourceLocation resourceLocation, CallbackInfoReturnable<RenderType> cir) {
+    private static void handleEntitySo1lid(ResourceLocation resourceLocation, CallbackInfoReturnable<RenderType> cir) {
         if(AlphaStatus.enabled())
             cir.setReturnValue(RenderType.entityTranslucent(resourceLocation));
     }
@@ -38,7 +43,7 @@ public class RenderTypeMixin extends RenderStateShard {
                 .setOverlayState(OVERLAY)
                 .setLayeringState(VIEW_OFFSET_Z_LAYERING)
                 .createCompositeState(true);
-            cir.setReturnValue(RenderType.create("armor_transparent", DefaultVertexFormat.NEW_ENTITY, 7, 256, true, false, compositeState));
+            cir.setReturnValue(create("armor_transparent", DefaultVertexFormat.NEW_ENTITY, 7, 256, true, false, compositeState));
         }
     }
 }
